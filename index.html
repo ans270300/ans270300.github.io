@@ -79,7 +79,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Alur Pencetakan Kode Billing Melalui LIBRA</h2>
+            <h2>Alur Permohonan Pembuatan Kode Billing Melalui LIBRA</h2>
           </div>
         </div>
         <div class="row">
@@ -134,10 +134,10 @@
             <strong>Permohonan berhasil terkirim!</strong> Harap menghubungi admin untuk memperoleh file kode billing.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
-          <form name="databse-libra">
+          <form name="database-libra">
             <div class="mb-3">
               <label for="npwp" class="form-label">NPWP</label>
-              <input type="number" class="form-control" id="npwp" name="npwp" aria-describedby="npwpHelp" />
+              <input type="number" required class="form-control" id="npwp" name="npwp" aria-describedby="npwpHelp" />
               <div id="npwpHelp" class="form-text">
                 Penulisan NPWP tanpa tanda baca, hanya angka saja (contoh: 560341222326000)
                 <p>Untuk transaksi tanah dan/atau bangunan, jika pihak penjual atau pihak yang menyerahkan tidak ada NPWP silakan isi 00.000.000.0-326.000</p>
@@ -145,14 +145,14 @@
             </div>
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="name"  name="nama_lengkap" aria-describedby="nameHelp" />
+              <input type="text" required class="form-control" id="name"  name="nama_lengkap" style="text-transform:uppercase" aria-describedby="nameHelp" />
               <div id="nameHelp" class="form-text">Isi nama lengkap sesuai dengan KTP (untuk orang pribadi) atau akta pendirian (untuk badan) untuk pihak yang akan membayarkan pajak</div>
             </div>
 
             <div class="mb-3">
             <label for="jenisPajak" class="form-label">Jenis Pajak</label>
-            <select  name="jenis_pajak" class="form-control jenisPajak selectFilter" data-target="jenisSetoran">
-              <option value="-1">-- Pilih Jenis Pajak--</option>
+            <select  name="jenis_pajak" class="form-control jenisPajak selectFilter" data-target="jenisSetoran" required>
+              <option value="" selected disabled hidden>-- Pilih Jenis Pajak--</option>
               <option data-ref="pph21">Pajak Penghasilan Pasal 21 (KAP: 411121)</option>
               <option data-ref="pph22">Pajak Penghasilan Pasal 22 (KAP: 411122)</option>
               <option data-ref="pph23">Pajak Penghasilan Pasal 23 (KAP: 411124)</option>
@@ -166,8 +166,8 @@
 
             <div class="mb-3">
             <label for="jenisSetoran" class="form-label" id="name" name="jenis_setoran">Jenis Setoran</label>
-            <select name="jenis_setoran" class="form-control jenisSetoran selectFilter">
-              <option value="-1">--Pilih Jenis Setoran Pajak</option>
+            <select name="jenis_setoran" class="form-control jenisSetoran selectFilter" required>
+              <option value="" selected disabled hidden>--Pilih Jenis Setoran Pajak</option>
               <option data-ref="masa21" data-belong="pph21">Masa (KJS: 100)</option>
               <option data-ref="masa22" data-belong="pph22">Masa (KJS: 100)</option>
               <option data-ref="apbn22" data-belong="pph22">Pemungutan oleh Bendaharawan APBN (KJS: 910)</option>
@@ -191,8 +191,8 @@
             
             <div class="mb-3">
               <label for="masaPajak" class="form-label" id="name" name="masa_pajak">Masa Pajak</label>
-              <select name="masa_pajak" class="form-control masaPajak selectFilter">
-                <option value="-1">--Pilih Masa Pajak</option>
+              <select name="masa_pajak" required class="form-control masaPajak selectFilter" required>
+                <option value="" selected disabled hidden>--Pilih Masa Pajak</option>
                 <option data-ref="january">Januari</option>
                 <option data-ref="february">Februari</option>
                 <option data-ref="march">Maret</option>
@@ -213,15 +213,31 @@
             
              <div class="mb-3">
               <label for="year" class="form-label">Tahun Pajak</label>
-              <input type="number" class="form-control" id="year" aria-describedby="yearHelp" name="tahun_pajak"/>
+              <input type="number" required class="form-control" id="year" aria-describedby="yearHelp" name="tahun_pajak"/>
               <div id="yearHelp" class="form-text">Masukkan tahun yang akan dibayarkan pajaknya</div>
                   </div>
 
+             <div class="mb-3">
+              <label for="jumlahSetor" class="form-label">Jumlah Setor</label>
+              <input type="number" class="form-control" required id="jumlahSetor" rows="3" aria-describedby="jumlahSetorHelp" name="jumlah_setor"></input>
+              <div id="jumlahSetorHelp" class="form-text">Masukkan nominal pajak yang akan disetorkan tanpa tanda baca (Contoh: 100000)</div>
+               </div>
+
+                  
             <div class="mb-3">
             <label for="uraian" class="form-label">Uraian</label>
-            <textarea class="form-control" id="uraian" rows="3" aria-describedby="uraianHelp" name="uraian"></textarea>
+            <textarea class="form-control" id="uraian" rows="3" aria-describedby="uraianHelp" name="uraian" style="text-transform:uppercase"></textarea>
              <div id="uraianHelp" class="form-text">Keterangan tambahan yang akan dicetak di kode biling apabila dibutuhkan</div>
                   </div>
+
+            <div class="mb-3">
+           <label for="noWa" class="form-label">Nomor WhatsApp</label>
+            <input class="form-control" required id="noWA" rows="3" aria-describedby="NoWaHelp" name="no_wa"></input>
+                     <div id="noWaHelp" class="form-text">Masukkan nomor WhatsApp aktif milik Anda untuk memperoleh kode billing</div>
+                          </div>
+
+
+
 
             </div>
                       
@@ -254,8 +270,8 @@
     <script src="selectFilter.min.js"></script>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxYN7x-L_XlSHurvUtY0LH5HbWmsqQSs_-LyiY39Au8ET8wHYuxsO3Wl1sHNOZ5Q4AB/exec'
-      const form = document.forms['databse-libra']
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzBt3w_lADlA-GjqY0Y69Vrw2RQi4koBQmjh1uBVz6HLleBYyu_2fVMgk9utx_KR8vT/exec'
+      const form = document.forms['database-libra']
       const btnKirim = document.querySelector('.btn-kirim');
       const btnLoading = document.querySelector('.btn-loading')
       const myAlert = document.querySelector('.my-alert')
