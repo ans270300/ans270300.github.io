@@ -15,14 +15,32 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-dark" style="background-color: #070f32">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo djp cropped.png" alt="KP2KP Baradatu" class="d-inline-block align-text-top" width="100" />
-          <strong>KP2KP Baradatu</strong>
-        </a>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand"><strong>LIBRA</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Beranda <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Alur Permohonan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#billing">Layanan Kode Billing Online Baradatu</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#operator">Hubungi Operator</a>
+        </li>
+        </ul>
       </div>
     </nav>
     <!-- Akhir Navbar -->
@@ -32,18 +50,13 @@
       <img src="img/logo libra circle (2).png" alt="LIBRA" width="200" />
       <h1 class="display-4"><strong>LIBRA</strong></h1>
       <p class="lead">Layanan Billing Online Baradatu.</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffff"
-          fill-opacity="1"
-          d="M0,192L12.6,186.7C25.3,181,51,171,76,165.3C101.1,160,126,160,152,170.7C176.8,181,202,203,227,192C252.6,181,278,139,303,101.3C328.4,64,354,32,379,48C404.2,64,429,128,455,133.3C480,139,505,85,531,101.3C555.8,117,581,203,606,202.7C631.6,203,657,117,682,112C707.4,107,733,181,758,186.7C783.2,192,808,128,834,96C858.9,64,884,64,909,90.7C934.7,117,960,171,985,192C1010.5,213,1036,203,1061,186.7C1086.3,171,1112,149,1137,160C1162.1,171,1187,213,1213,229.3C1237.9,245,1263,235,1288,208C1313.7,181,1339,139,1364,106.7C1389.5,75,1415,53,1427,42.7L1440,32L1440,320L1427.4,320C1414.7,320,1389,320,1364,320C1338.9,320,1314,320,1288,320C1263.2,320,1238,320,1213,320C1187.4,320,1162,320,1137,320C1111.6,320,1086,320,1061,320C1035.8,320,1011,320,985,320C960,320,935,320,909,320C884.2,320,859,320,834,320C808.4,320,783,320,758,320C732.6,320,707,320,682,320C656.8,320,632,320,606,320C581.1,320,556,320,531,320C505.3,320,480,320,455,320C429.5,320,404,320,379,320C353.7,320,328,320,303,320C277.9,320,253,320,227,320C202.1,320,177,320,152,320C126.3,320,101,320,76,320C50.5,320,25,320,13,320L0,320Z"
-        ></path>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#070f32" fill-opacity="1" d="M0,160L11.4,154.7C22.9,149,46,139,69,154.7C91.4,171,114,213,137,224C160,235,183,213,206,186.7C228.6,160,251,128,274,138.7C297.1,149,320,203,343,213.3C365.7,224,389,192,411,160C434.3,128,457,96,480,101.3C502.9,107,526,149,549,149.3C571.4,149,594,107,617,106.7C640,107,663,149,686,181.3C708.6,213,731,235,754,245.3C777.1,256,800,256,823,229.3C845.7,203,869,149,891,149.3C914.3,149,937,203,960,229.3C982.9,256,1006,256,1029,245.3C1051.4,235,1074,213,1097,176C1120,139,1143,85,1166,53.3C1188.6,21,1211,11,1234,53.3C1257.1,96,1280,192,1303,197.3C1325.7,203,1349,117,1371,112C1394.3,107,1417,181,1429,218.7L1440,256L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"></path></svg>
+
     </section>
     <!-- Akhir Jumbotron -->
     <!-- About LIBRA -->
-    <section id="about">
-      <div class="container">
+    <section id="about"  style="background-color: #070f32">
+      <div class="container text-white" style="background-color: #070f32">
         <div class="row text-center">
           <div class="col">
             <h2>Apa Itu LIBRA?</h2>
@@ -52,13 +65,13 @@
         <div class="row text-center">
           <div class="col-md-8"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit et explicabo quas, neque repellat ut nostrum recusandae perferendis aperiam numquam molestiae totam quis quidem ea distinctio excepturi modi exercitationem. Saepe,
-            consequatur hic? Nam laborum illo sit totam sint obcaecati beatae?
+            LIBRA adalah sistem layanan KP2KP Baradatu untuk permohonan kode billing wajib pajak secara online yang berbasis website
           </p>
           <div class="col-md-12">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facilis explicabo nam blanditiis alias numquam repudiandae doloremque voluptates fugit odio laudantium quos, debitis aut et non? Nemo tenetur odio quam, quia,
-              praesentium nobis sunt expedita odit, in deserunt ut ipsum a quas quod ab asperiores magnam eaque delectus aliquam atque.
+              LIBRA merupakan bentuk penyederhanaan Sistem Billing DJP (e-billing) yang ditujukan kepada Wajib Pajak di wilayah kerja KP2KP Baradatu yang masih menjalankan kewajiban perpajakannya secara manual. 
+              LIBRA dapat menjadi sarana edukasi agar Wajib Pajak dapat
+
             </p>
           </div>
         </div>
@@ -249,12 +262,12 @@
           </form>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#212529" fill-opacity="1" d="M0,128L30,122.7C60,117,120,107,180,117.3C240,128,300,160,360,165.3C420,171,480,149,540,128C600,107,660,85,720,85.3C780,85,840,107,900,106.7C960,107,1020,85,1080,69.3C1140,53,1200,43,1260,64C1320,85,1380,139,1410,165.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#070f32" fill-opacity="1" d="M0,32L11.4,69.3C22.9,107,46,181,69,192C91.4,203,114,149,137,122.7C160,96,183,96,206,106.7C228.6,117,251,139,274,170.7C297.1,203,320,245,343,266.7C365.7,288,389,288,411,256C434.3,224,457,160,480,154.7C502.9,149,526,203,549,229.3C571.4,256,594,256,617,234.7C640,213,663,171,686,170.7C708.6,171,731,213,754,192C777.1,171,800,85,823,74.7C845.7,64,869,128,891,170.7C914.3,213,937,235,960,213.3C982.9,192,1006,128,1029,85.3C1051.4,43,1074,21,1097,37.3C1120,53,1143,107,1166,133.3C1188.6,160,1211,160,1234,176C1257.1,192,1280,224,1303,224C1325.7,224,1349,192,1371,154.7C1394.3,117,1417,75,1429,53.3L1440,32L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"></path></svg>
 
     </section>
     <!-- AKHIR BILLING -->
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center pb-3">
+    <footer id="operator"  style="background-color: #070f32"  class="text-light text-center pb-3">
       <p>Mengalami kendala saat pengisian? Silakan hubungi <a class="text-warning" href="https://wa.me/6287886488595?text=Halo%20operator%20LIBRA!%20Saya%20mengalami%20kendala%20berupa:" target="_blank">operator.</a><i class="bi bi-chat-quote-fill text-light"></i></p>
       <p><strong>©KP2KP Baradatu</strong></p>
     </footer>
