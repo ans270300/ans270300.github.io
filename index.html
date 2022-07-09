@@ -65,12 +65,14 @@
         <div class="row text-center">
           <div class="col-md-8"></div>
           <p>
-            LIBRA adalah sistem layanan KP2KP Baradatu untuk permohonan kode billing wajib pajak secara online yang berbasis website
+            LIBRA adalah sistem layanan permohonan kode billing secara online berbasis website milik KP2KP Baradatu.
+            LIBRA merupakan bentuk penyederhanaan Sistem Billing DJP (e-billing) yang ditujukan kepada Wajib Pajak di wilayah kerja KP2KP Baradatu yang masih menjalankan kewajiban perpajakannya secara manual. 
           </p>
           <div class="col-md-12">
             <p>
-              LIBRA merupakan bentuk penyederhanaan Sistem Billing DJP (e-billing) yang ditujukan kepada Wajib Pajak di wilayah kerja KP2KP Baradatu yang masih menjalankan kewajiban perpajakannya secara manual. 
-              LIBRA dapat menjadi sarana edukasi agar Wajib Pajak dapat
+              
+              LIBRA dapat memberikan ruang edukasi sekaligus pengalaman langsung tentang pemenuhan kewajiban perpajakan secara online, terutama pada aspek penerbitan kode billing, untuk penyetoran pajak ke kas negara.
+              LIBRA hadir di tengah masyarakat sebagai jembatan dan katalisator agar Wajib Pajak yang masih melaksanakan kewajiban perpajakan secara manual dapat segera bertransisi secara online dengan memberikan pengalaman langsung yang serupa ketika menggunakan fitur e-billing.
 
             </p>
           </div>
@@ -143,17 +145,14 @@
         </div>
         <div class="row"></div>
         <div class="col-md-8">
-          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-            <strong>Permohonan berhasil terkirim!</strong> Harap menghubungi admin untuk memperoleh file kode billing.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
+          
           <form name="database-libra">
             <div class="mb-3">
               <label for="npwp" class="form-label">NPWP</label>
               <input type="number" required class="form-control" id="npwp" name="npwp" aria-describedby="npwpHelp" />
               <div id="npwpHelp" class="form-text">
                 Penulisan NPWP tanpa tanda baca, hanya angka saja (contoh: 560341222326000)
-                <p>Untuk transaksi tanah dan/atau bangunan, jika pihak penjual atau pihak yang menyerahkan tidak ada NPWP silakan isi 00.000.000.0-326.000</p>
+                <p>Untuk transaksi tanah dan/atau bangunan, jika pihak penjual atau pihak yang menyerahkan tidak ada NPWP silakan isi 000000000326000</p>
               </div>
             </div>
             <div class="mb-3">
@@ -248,7 +247,13 @@
             <input class="form-control" required id="noWA" rows="3" aria-describedby="NoWaHelp" name="no_wa"></input>
                      <div id="noWaHelp" class="form-text">Masukkan nomor WhatsApp aktif milik Anda untuk memperoleh kode billing</div>
                           </div>
-
+<div class="alert alert-success d-none my-alert" role="alert">
+            <h4 class="alert-heading">Permohonan Berhasil Dibuat!</h4>
+            <p>Permohonan Anda berhasil direkam. </p>
+              <p>Silakan klik tombol di bawah ini untuk terhubung dengan hotline pelayanan KP2KP Baradatu.</p>
+            <hr>
+            <button type="submit" class="btn btnWA text-white" style="background-color:#070f32">Hubungi Pelayanan KP2KP Baradatu</button>
+          </div>
 
 
 
@@ -289,7 +294,6 @@
       const btnLoading = document.querySelector('.btn-loading')
       const myAlert = document.querySelector('.my-alert')
 
-
       form.addEventListener('submit', e => {
         e.preventDefault()
 
@@ -307,7 +311,7 @@
 
             //tampilkan alert notice
             myAlert.classList.toggle('d-none')
-
+            
             //reset form
             form.reset()
 
