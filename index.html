@@ -247,13 +247,14 @@
             <input class="form-control" required id="noWA" rows="3" aria-describedby="NoWaHelp" name="no_wa"></input>
                      <div id="noWaHelp" class="form-text">Masukkan nomor WhatsApp aktif milik Anda untuk memperoleh kode billing</div>
                           </div>
-<div class="alert alert-success d-none my-alert" role="alert">
+
+            <div class="alert alert-success d-none my-alert" role="alert">
             <h4 class="alert-heading">Permohonan Berhasil Dibuat!</h4>
-            <p>Permohonan Anda berhasil direkam. </p>
-              <p>Silakan klik tombol di bawah ini untuk terhubung dengan hotline pelayanan KP2KP Baradatu.</p>
+            <p>Permohonan Anda berhasil direkam.</p>
+            <p>Silakan klik tombol di bawah ini untuk terhubung dengan hotline pelayanan KP2KP Baradatu</p>
             <hr>
-            <button type="submit" class="btn btnWA text-white" style="background-color:#070f32">Hubungi Pelayanan KP2KP Baradatu</button>
-          </div>
+           <a id="tombolWA" target='_blank' class="btn btnWA text-white" style="background-color:#070f32">Hubungi Pelayanan KP2KP Baradatu</a>
+            </div>             
 
 
 
@@ -310,7 +311,31 @@
 
             //tampilkan alert notice
             myAlert.classList.toggle('d-none')
+            console.log(new FormData(form))
+            console.log(form)
+
+            const labelWA = {
+              npwp: 'NPWP',
+              nama_lengkap: 'NAMA LENGKAP',
+              jenis_pajak: 'JENIS PAJAK',
+              jenis_setoran: 'JENIS SETORAN',
+              masa_pajak: 'MASA PAJAK',
+              tahun_pajak: 'TAHUN PAJAK',
+              jumlah_setor: 'JUMLAH SETOR',
+              uraian: 'URAIAN',
+              no_wa: 'NOMOR WA'
+            }
+
+            const a = new FormData(form)
+
+            let url_WA='https://wa.me/6282110230490?text='
             
+            for (const key of a.keys()){
+            url_WA+=encodeURI(labelWA[key]+': '+ a.get(key))+'%0a'
+            }
+
+            $('#tombolWA').attr('href',url_WA)
+
             //reset form
             form.reset()
 
