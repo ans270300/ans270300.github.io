@@ -3,6 +3,9 @@
   background-color: #ffc91b;
 }
 
+.card {
+  size-adjust: 6rem;
+}
 .blockquote-footer {
   padding-top: 1rem;
 }
