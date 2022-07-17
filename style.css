@@ -22,3 +22,21 @@
 section {
   padding-top: 6rem;
 }
+
+.accordion {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.accordion-button {
+  background-color: #424007;
+  color: white;
+  text-align: left;
+}
+
+.accordion-body {
+  background-color: #e0d5b7;
+}
