@@ -18,7 +18,7 @@
   <body id="home">
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-<img src="img/LOGO_LIBRA_AI_POLOS.png" width="50" />
+<img src="img/LOGO_LIBRA_AI_POLOS.png" alt="Logo LIBRA" width="50" />
       <a class="navbar-brand"><strong>LIBRA</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -174,7 +174,7 @@
             </div>
             <div class="mb-3">
               <label for="name" class="form-label">Nama Lengkap</label>
-              <input type="text" required class="form-control" id="name"  name="nama_lengkap" style="text-transform:uppercase" aria-describedby="nameHelp" />
+              <input type="text" required class="form-control" id="namaLengkap"  name="nama_lengkap" style="text-transform:uppercase" aria-describedby="nameHelp" />
               <div id="nameHelp" class="form-text">Isi nama lengkap sesuai dengan KTP (untuk orang pribadi) atau akta pendirian (untuk badan) untuk pihak yang akan membayarkan pajak</div>
             </div>
 
@@ -197,7 +197,7 @@
             </div>
 
             <div class="mb-3">
-            <label for="jenisSetoran" class="form-label" id="name" name="jenis_setoran">Jenis Setoran</label>
+            <label for="jenisSetoran" class="form-label" id="jenisSetoran" name="jenis_setoran">Jenis Setoran</label>
             <select onchange="enableNOP(this); enablealamatWP(this)" name="jenis_setoran" class="form-control jenisSetoran selectFilter" required>
               <option value="" selected disabled hidden>--Pilih Jenis Setoran Pajak</option>
               <option data-ref="masa21" data-belong="pph21" value="Masa (KJS: 100)">Masa (KJS: 100)</option>
@@ -252,11 +252,11 @@
 
             <div class="mb-3 d-none" id="nomorobjekpajak">
              <label for="nop" class="form-label">Nomor Objek Pajak (NOP)</label>
-                    <input style="background-color:#ffc91b" type="number" required class="form-control" aria-describedby="nopHelp" name="nop"/>
+                    <input style="background-color:#ffc91b" type="number" class="form-control" aria-describedby="nopHelp" name="nop"/>
                     <div id="nopHelp" class="form-text">Masukkan nomor objek pajak (NOP) yang ada di Surat Pemberitahuan Pajak Terutang (SPPT) PBB Anda!</div>
                         </div>
 
-            <script type="text/javascript">
+            <script>
               function enableNOP(answer) {
                 console.log(answer.value);
                   if(answer.value == 'Pengalihan Hak Tanah dan/atau Bangunan (KJS: 402)' ){
@@ -270,11 +270,11 @@
 
 <div class="mb-3 d-none" id="alamatWP">
   <label for="address" class="form-label">Alamat</label>
-  <input style="background-color:#ffc91b" type="text" required class="form-control" id="address"  name="alamat" style="text-transform:uppercase" aria-describedby="addressHelp" />
+  <input style="background-color:#ffc91b" type="text" class="form-control" id="address"  name="alamat" style="text-transform:uppercase" aria-describedby="addressHelp" />
   <div id="addressHelp" class="form-text">Isi alamat sesuai dengan KTP (untuk orang pribadi) atau akta pendirian (untuk badan) untuk pihak yang akan membayarkan pajak</div>
 </div>
 
-<script type="text/javascript">
+<script>
   function enablealamatWP(answer) {
     console.log(answer.value);
       if(answer.value == 'Pengalihan Hak Tanah dan/atau Bangunan (KJS: 402)' ){
