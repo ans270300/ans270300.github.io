@@ -20,6 +20,36 @@
   margin-top: 1rem;
 }
 
+#tutorialLibra {
+  padding-top: 3rem;
+}
+
+.videowrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 10rem;
+  height: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videowrapper iframe {
+  position: absolute;
+  padding-left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  top: 5rem;
+  right: 0px;
+  bottom: 0px;
+  height: 80%;
+  width: 80%;
+}
+
+#gelombangkrem {
+  padding-top: 4rem;
+}
+
 .blockquote-footer {
   padding-top: 1rem;
 }
