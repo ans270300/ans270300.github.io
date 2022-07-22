@@ -26,8 +26,8 @@
 
 .videowrapper {
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 10rem;
+  padding-bottom: 50%;
+  padding-top: 15rem;
   height: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -39,9 +39,8 @@
   margin-left: auto;
   margin-right: auto;
   left: 0px;
-  top: 5rem;
+  top: 2rem;
   right: 0px;
-  bottom: 0px;
   height: 80%;
   width: 80%;
 }
